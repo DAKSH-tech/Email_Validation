@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript email validation</title>
+</head>
+<body>
+<div class="mail">
+<h2>Enter Email for check Validation</h2>
+<form>
+<input id="text" type='text' name='text1'/>
+<button type="button" onclick="ValidateEmail()">Submit</button>
+</form>
+</div>
+<script>
+function ValidateEmail(inputText)
+{
+var text=document.getElementById("text").value;
+var mailformat = /^([a-zA-Z0-9/.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})(.[a-z]{2,20})?$/;
+if(mailformat.test(text))
+{
+alert("Valid email address!");   
+return true;
+}
+else
+{
+alert("Invalid email address!");   
+return false;
+}
+}
+</script>   
+</body>
+</html>
